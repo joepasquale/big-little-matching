@@ -4,8 +4,58 @@
     <script src = "index.js">
     </script>
     <style>
+        
+        #match-input{
+            margin: 10px;
+        }
     </style>
     <body>
         <h1>Big Brother - Little Brother Matching Machine</h1>
+        <h2>How to use</h2>
+        <p>For every person, put in their name, along with their top five choices for a little.<br>
+            You don't need all five names filled. Make sure that if the person put in is a brother, you check the box;<br>
+            The set of people in the brother set get priority over the people in the non-brother set (i.e. the "pledge" set).
+        </p>
+        <section id="match-input">
+            <div>
+                <h2>Put person here</h2>
+                <label for="bigName">Name of Person:</label>
+                <input type="text" id="bigName">
+                <br>
+                <label for="brotherCheckbox">Brother?</label>
+                <input type="checkbox" id="brotherCheckbox">
+            </div>
+            <div>
+                <h2>Put person's preference list here</h2>
+                <p>(You don't need all five)</p>
+                <label for="firstChoice">First Preference:</label>
+                <input type="text" id="firstChoice">
+                <br>
+                <label for="secondChoice">Second Preference</label>
+                <input type="text" id="secondChoice">
+                <br>
+                <label for="thirdChoice">Third Preference:</label>
+                <input type="text" id="thirdChoice">
+                <br>
+                <label for="fourthChoice">Fourth Preference:</label>
+                <input type="text" id="fourthChoice">
+                <br>
+                <label for="fifthChoice">Fifth Preference:</label>
+                <input type="text" id="fifthChoice">
+            </div>
+            <div>
+                <button id="addMatch">Add to match list</button>
+                <br>
+                <button id="matchPairs">Match all pairs</button>
+
+            </div>
+        </section>
+        <section id = "match-output">
+            <table id="resultTable">
+                <th>Big Name</th>
+                <th>Little Name</th>
+                <!-- DOM manipulation adds table rows-->
+            </table>
+        </section>
     </body>
 </html>
