@@ -6,8 +6,14 @@
     <style>
         
         #match-input{
-            margin: 10px;
+            float: left;
+            position: fixed;
         }
+
+        #current-list{
+            float: right;
+        }
+
     </style>
     <body>
         <h1>Big Brother - Little Brother Matching Machine</h1>
@@ -47,7 +53,14 @@
                 <button id="addMatch">Add to match list</button>
                 <br>
                 <button id="matchPairs">Match all pairs</button>
-
+            </div>
+            <div id = "current-list">
+                <table id="list">
+                    <tr>
+                        <th>Brother</th>
+                        <th>Non-brother</th>
+                    </tr>
+                </table>
             </div>
         </section>
         <section id = "match-output">
